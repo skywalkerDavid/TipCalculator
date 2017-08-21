@@ -71,10 +71,6 @@ class ViewController: UIViewController {
         var tip : Double = 0.0
         if tipPercentage.selectedSegmentIndex == CUSTOM_TIP_INDEX {
             tip = Double(customTipField.text!) ?? 0
-            
-            if customTipField.text!.isEmpty {
-                customTipField.becomeFirstResponder()
-            }
         } else {
             tip = bill * tips[tipPercentage.selectedSegmentIndex]
             customTipField.text = ""
